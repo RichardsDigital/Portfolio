@@ -1,0 +1,23 @@
+<%- include('partials/header.ejs') %> 
+
+    <section id="about">
+        <img src="images/mountains.jpg" alt="">
+        <h2>Skillset</h2>
+        <button id="learnMore">About Me</button>
+        <script>
+            document.getElementById('learnMore').onclick = () => {
+                location.href = "/learn-more";
+            };
+        </script>
+        <div class="skill-boxes">
+            <div><h4 class="skill-text">HTML</h4></div>
+            <div><h4 class="skill-text">CSS</h4></div>
+            <div><h4 class="skill-text">JavaScript</h4></div>
+            <div><h4 class="skill-text">MongoDB</h4></div>
+            <div><h4 class="skill-text">Node.js</h4></div>
+            <div><h4 class="skill-text">React</h4></div>
+        </div>
+    </section>
+
+</body>
+</html>
