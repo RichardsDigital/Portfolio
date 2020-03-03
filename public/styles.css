@@ -308,6 +308,16 @@ nav ul {
     font-size: 60px;
     left: 3%;
     top: 110px;
+    animation: 1s slider;
+}
+
+.github-logo {
+    position: absolute;
+    width: 180px;
+    top: 124px;
+    left: 71%;
+    opacity: 70%;
+    animation: 3s lesslight;
 }
 
 #portfolio .border-box {
@@ -373,15 +383,6 @@ nav ul {
     100% {
         opacity: 70%;
     }
-}
-
-.github-logo {
-    position: absolute;
-    width: 350px;
-    left: 15%;
-    top: 32%;
-    opacity: 70%;
-    animation: 1.8s lesslight;
 }
 
 .github-logo:hover {
