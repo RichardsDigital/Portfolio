@@ -273,10 +273,11 @@ h4 {
 
 #learn-more .info-box img {
     position: absolute;
-    width: 160px;
-    height: 160px;
+    object-fit: cover;
+    width: 180px;
+    height: 180px;
     z-index: 2;
-    top: 10%;
+    top: 7%;
     border-radius: 100%;
 }
 
