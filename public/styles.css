@@ -55,7 +55,7 @@ nav {
 nav ul {
     position: relative;
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 52% 1fr 0.25fr;
+    grid-template-columns: 1.4fr 1fr 1fr 54% 1fr 0.25fr;
     padding: 20px;
     padding-left: 35px;
 }
@@ -155,23 +155,25 @@ nav ul {
     height: 500px;
     width: 1000px;
     top: 120px;
-    background-color: white;
+    background-color: #272727;
     border-radius: 10px;
 }
 
 #learn-more .info-box :nth-child(2) {
     position: absolute;
-    color: black;
-    width: 85%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    width: 75%;
     text-align: center;
-    top: 45%;
+    top: 48%;
 }
 #learn-more .info-box :nth-child(3) {
     position: absolute;
-    color: black;
-    width: 85%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    width: 75%;
     text-align: center;
-    top: 57%;
+    top: 60%;
 }
 
 #learn-more .info-box img {
@@ -311,13 +313,26 @@ nav ul {
     animation: 1s slider;
 }
 
+@keyframes lesslight {
+    0% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 100%;
+    }
+}
+
 .github-logo {
     position: absolute;
     width: 180px;
     top: 124px;
     left: 71%;
+    opacity: 100%;
+    animation: 2s lesslight;
+}
+
+.github-logo:hover {
     opacity: 70%;
-    animation: 3s lesslight;
 }
 
 #portfolio .border-box {
@@ -376,17 +391,29 @@ nav ul {
     animation: expandright 1.4s;
 }
 
-@keyframes lesslight {
+@keyframes expandrightpic {
     0% {
+        width: 0;
         opacity: 0;
-    } 
+    }
     100% {
-        opacity: 70%;
+        width: 563px;
+        opacity: 100%;
     }
 }
 
-.github-logo:hover {
+.bytehunt-pic {
+    position: absolute;
+    object-fit: cover;
+    top: 5%;
+    left: 6.3%;
+    height: 360px;
+    width: 563px;
     opacity: 100%;
+    animation: expandrightpic 1s;
+}
+.bytehunt-pic:hover {
+    opacity: 80%;
 }
 
 #contact {
@@ -479,7 +506,7 @@ form :nth-child(4) {
 
 .contact-info {
     position: absolute;
-    border-top: 24px solid rgba(41, 41, 41);
+    border-top: 18px solid rgba(41, 41, 41);
     background-color: rgba(255, 255, 255, 0.2);
     padding: 30px;
     top: 33%;
@@ -488,8 +515,4 @@ form :nth-child(4) {
 }
 .contact-info p {
     opacity: 70%;
-}
-
-.contact-info :nth-child(2) {
-    padding-top: 20px;
 }
