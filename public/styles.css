@@ -42,41 +42,136 @@ h4 {
     letter-spacing: 1.5px;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    height: 62px;
-    width: 100%;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-    background-color: transparent;
+/* Navigation Bar */
+
+@media only screen and (min-width: 769px) {
+    nav {
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        height: 60px;
+        width: 100%;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+        background-color: transparent;
+    }
+    nav ul {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 54% 1fr 0.32fr;
+        padding: 20px;
+        padding-left: 3%;
+    }
+    .linkedin-icon {
+        height: 25px;
+    }
+    .hamburger-menu {
+        display: none;
+    }
 }
 
-nav ul {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 54% 1fr 0.25fr;
-    padding: 20px;
-    padding-left: 35px;
+@media only screen and (max-width: 768px) {
+
+    nav a {
+        display: none;
+    }
+
+    .smallScreenNavLine {
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        height: 60px;
+        width: 100%;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+        background-color: transparent;
+    }
+
+    nav ul h4 {
+        position: fixed;
+        top: 3%;
+        left: 3%;
+        z-index: 2;
+    }
+    .hamburger-menu {
+        position: fixed;
+        top: 2%;
+        right: 3%;
+        z-index: 2;
+        width: 35px;
+    }
 }
 
-.linkedin-icon {
-    height: 25px;
+
+/* Home Section */
+
+@media only screen and (min-width: 769px) {
+    #home img {
+        position: relative;
+        top: 15px;
+        height: 460px;
+        width: 750px;
+        left: 420px;
+        animation: 1.5s slide;
+    }
+    #home h1 {
+        position: relative;
+        font-size: 100px;
+        left: 3%;
+        top: 200px;
+        animation: 2s light;
+    }
+    #home :nth-child(2){
+        position: absolute;
+        font-size: 35px;
+        left: 3.3%;
+        top: 340px;
+        animation: 2s light;
+    }
+    #home :nth-child(3){
+        position: absolute;
+        font-size: 35px;
+        left: 3.3%;
+        top: 390px;
+        animation: 2s light;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #home img {
+        position: absolute;
+        height: 670px;
+        top: 0;
+    }
+    #home h1 {
+        position: relative;
+        font-size: 100px;
+        left: 3%;
+        top: 200px;
+        animation: 2s light;
+        z-index: 2;
+    }
+    #home :nth-child(2){
+        position: absolute;
+        font-size: 35px;
+        left: 3.3%;
+        top: 340px;
+        animation: 2s light;
+        z-index: 2;
+    }
+    #home :nth-child(3){
+        position: absolute;
+        font-size: 35px;
+        left: 3.3%;
+        top: 390px;
+        animation: 2s light;
+        z-index: 2;
+    }
 }
 
 #home {
-    position: static;
+    position: absolute;
+    top: 0;
     height: 670px;
+    width: 100%;
     background-color: #272727;
-}
-
-#home img {
-    position: relative;
-    top: 15px;
-    height: 460px;
-    width: 750px;
-    left: 420px;
-    animation: 1.5s slide;
 }
 
 @keyframes slide {
@@ -95,29 +190,6 @@ nav ul {
     100% {
         opacity: 100%;
     }
-}
-
-#home h1 {
-    position: relative;
-    font-size: 100px;
-    left: 3%;
-    top: 200px;
-    animation: 2s light;
-}
-
-#home :nth-child(2){
-    position: absolute;
-    font-size: 35px;
-    left: 3.3%;
-    top: 340px;
-    animation: 2s light;
-}
-#home :nth-child(3){
-    position: absolute;
-    font-size: 35px;
-    left: 3.3%;
-    top: 390px;
-    animation: 2s light;
 }
 
 #about {
@@ -163,7 +235,7 @@ nav ul {
     position: absolute;
     font-family: 'Roboto', sans-serif;
     color: white;
-    width: 75%;
+    width: 90%;
     text-align: center;
     top: 48%;
 }
@@ -171,10 +243,33 @@ nav ul {
     position: absolute;
     font-family: 'Roboto', sans-serif;
     color: white;
-    width: 75%;
+    width: 90%;
     text-align: center;
     top: 60%;
 }
+
+@media only screen and (max-width: 768px) {
+    #learn-more .info-box :nth-child(2) {
+        position: absolute;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        color: white;
+        width: 95%;
+        text-align: center;
+        top: 48%;
+    }
+    #learn-more .info-box :nth-child(3) {
+        position: absolute;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        color: white;
+        width: 95%;
+        text-align: center;
+        top: 60%;
+        padding-top: 15px;
+    }
+}
+
 
 #learn-more .info-box img {
     position: absolute;
@@ -190,8 +285,8 @@ nav ul {
     font-size: 30px;
     height: 30px;
     width: 30px;
-    top: 120px;
-    left: 100px;
+    top: 2%;
+    left: 2%;
     background-color: transparent;
     border: none;
 }
@@ -294,6 +389,24 @@ nav ul {
     background-color: rgba(5, 10, 17, 0.2);
 }
 
+@media only screen and (max-width: 768px) {
+    .skill-boxes :nth-child(4) {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        background-color: rgba(16, 50, 63, 0.6);
+    }
+    .skill-boxes :nth-child(5) {
+        grid-column: 3/5;
+        grid-row: 2/3;
+        background-color: rgba(24, 39, 59, 0.4);
+    }
+    .skill-boxes :nth-child(6) {
+        grid-column: 5/7;
+        grid-row: 2/3;
+        background-color: rgba(5, 10, 17, 0.2);
+    }
+}
+
 #portfolio {
     position: relative;
     height: 670px;
@@ -322,98 +435,121 @@ nav ul {
     }
 }
 
-.github-logo {
-    position: absolute;
-    width: 180px;
-    top: 124px;
-    left: 71%;
-    opacity: 100%;
-    animation: 2s lesslight;
-}
-
-.github-logo:hover {
-    opacity: 70%;
-}
-
-#portfolio .border-box {
-    position: relative;
-    height: 400px;
-    width: 80%;
-    top: 220px;
-    left: 3.2%;
-    border-top: 3px solid rgba(255, 255, 255, 0.4);
-    border-left: 3px solid rgba(255, 255, 255, 0.4);
-
-}
-
-#portfolio .border-box .grid {
-    height: 400px;
-    width: 102%;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 60% 1fr;
-}
-
-@keyframes expandright {
-    0% {
-        width: 0%;
+@media only screen and (min-width: 769px) {
+    .github-logo {
+        position: absolute;
+        width: 180px;
+        top: 124px;
+        right: 15%;
+        opacity: 100%;
+        animation: 2s lesslight;
     }
-    100% {
-        width: 89.8%;
+    
+    .github-logo:hover {
+        opacity: 70%;
     }
-}
-
-.grid :nth-child(1) {
-    background-color: rgba(255, 255, 255, 0.4);
-    border-left: 44px solid rgba(41, 41, 41);
-    margin: 20px;
-    margin-right: 0;
-    grid-row: 1/3;
-    grid-template-columns: 2/3;
-    animation: expandright 1s;
-}
-.grid :nth-child(2) {
-    background-color: rgba(255, 255, 255, 0.4);
-    border-left: 24px solid rgba(41, 41, 41);
-    margin: 20px;
-    margin-bottom: 10px;
-    grid-row: 1/2;
-    grid-template-columns: 2/3;
-    animation: expandright 1.4s;
-}
-.grid :nth-child(3) {
-    background-color: rgba(255, 255, 255, 0.4);
-    border-left: 24px solid rgba(41, 41, 41);
-    margin: 20px;
-    margin-top: 10px;
-    grid-row: 2/3;
-    grid-template-columns: 2/3;
-    animation: expandright 1.4s;
-}
-
-@keyframes expandrightpic {
-    0% {
-        width: 0;
-        opacity: 0;
+    
+    #portfolio .border-box {
+        position: relative;
+        height: 400px;
+        width: 80%;
+        top: 220px;
+        left: 3.2%;
+        border-top: 3px solid rgba(255, 255, 255, 0.4);
+        border-left: 3px solid rgba(255, 255, 255, 0.4);
+    
     }
-    100% {
-        width: 563px;
+    
+    #portfolio .border-box .grid {
+        height: 400px;
+        width: 102%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 60% 1fr;
+    }
+    
+    .pBox-1 {
+        background-color: rgba(255, 255, 255, 0.4);
+        border-left: 44px solid rgba(41, 41, 41);
+        margin: 20px;
+        margin-right: 0;
+        grid-row: 1/3;
+        grid-template-columns: 2/3;
+    }
+    .pBox-2 {
+        background-color: rgba(255, 255, 255, 0.4);
+        border-left: 24px solid rgba(41, 41, 41);
+        margin: 20px;
+        margin-bottom: 10px;
+        grid-row: 1/2;
+        grid-template-columns: 2/3;
+    }
+    .pBox-3 {
+        background-color: rgba(255, 255, 255, 0.4);
+        border-left: 24px solid rgba(41, 41, 41);
+        margin: 20px;
+        margin-top: 10px;
+        grid-row: 2/3;
+        grid-template-columns: 2/3;
+    }
+    
+    .bytehunt-pic {
+        position: relative;
+        object-fit: cover;
+        height: 360px;
+        width: 100%;
         opacity: 100%;
     }
+    
+    .bytehunt-pic:hover {
+        opacity: 80%;
+    }
 }
 
-.bytehunt-pic {
-    position: absolute;
-    object-fit: cover;
-    top: 5%;
-    left: 6.3%;
-    height: 360px;
-    width: 563px;
-    opacity: 100%;
-    animation: expandrightpic 1s;
-}
-.bytehunt-pic:hover {
-    opacity: 80%;
+@media only screen and (max-width: 768px) {
+
+    .github-logo {
+        position: absolute;
+        width: 240px;
+        top: 56%;
+        left: 26%;
+        opacity: 100%;
+        animation: 2s lesslight;
+        z-index: 1;
+    }
+
+    #portfolio .border-box {
+        position: absolute;
+        height: 400px;
+        width: 91%;
+        margin: 20px;
+        top: 30%;
+        border-top: 3px solid rgba(255, 255, 255, 0.4);
+        border-left: 3px solid rgba(255, 255, 255, 0.4);
+    }
+    #portfolio .border-box .grid {
+        height: 400px;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .pBox-1 {
+        background-color: rgba(255, 255, 255, 0.4);
+        border-left: 0 solid rgba(41, 41, 41);
+        margin-right: 0;
+        grid-row: 1/3;
+        grid-template-columns: 2/3;
+    }
+    .bytehunt-pic {
+        display: none;
+    }
+    .grid :nth-child(2) {
+        display: none;
+    }
+    .grid :nth-child(3) {
+        display: none;
+    }
 }
 
 #contact {
@@ -515,4 +651,43 @@ form :nth-child(4) {
 }
 .contact-info p {
     opacity: 70%;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .contact-info {
+        display: none;
+    }
+    .form {
+        position: relative;
+        top: 220px;
+        left: 3%;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        height: 62%;
+        width: 93%;
+    }
+    form :nth-child(3) {
+        position: absolute;
+        top: 135px;
+        left: 30px;
+        width: 84%;
+        height: 170px;
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        background-color: transparent;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    form :nth-child(4) {
+        position: absolute;
+        background-color: #272727;
+        height: 40px;
+        width: 200px;
+        font-size: 18px;
+        left: 50.6%;
+        top: 348px;
+        border-radius: 5px;
+        border: none;
+    }
 }
