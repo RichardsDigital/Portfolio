@@ -67,6 +67,9 @@ h4 {
     .hamburger-menu {
         display: none;
     }
+    .side-nav {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -153,6 +156,7 @@ h4 {
         top: 390px;
         animation: 2s light;
     }
+    
 }
 @media only screen and (max-width: 768px) {
     #home img {
