@@ -17,7 +17,7 @@
         <ul>
             <h4>KORDIFIER</h4>
             <a class="h" href="/">Home</a>
-            <a class="a" onclick="about()" href="/about">About</a>
+            <a class="a" href="/about">About</a>
             <a class="p" href="/portfolio">Portfolio</a>
             <a class="c" href="/contact">Contact</a>
             <a href="https://www.linkedin.com/in/daniel-richards-1724591a3" target="_blank">
@@ -25,3 +25,34 @@
         </a>
         </ul>
     </nav>
+
+    <div class="side-nav">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+<script>
+    var click = 1;
+
+    document.getElementsByClassName('hamburger-menu')[0].addEventListener("click", function(){
+        click++;
+        if ((click % 2) === 0) {
+        openNav();
+        click;
+        }   
+        if ((click % 2) === 1) {
+        closeNav()
+        click;
+        }
+    });
+
+    function openNav() {
+        document.getElementsByClassName('side-nav')[0].style.width = '40%';
+    };
+    function closeNav() {
+        document.getElementsByClassName('side-nav')[0].style.width = '0';
+    }
+
+</script>
