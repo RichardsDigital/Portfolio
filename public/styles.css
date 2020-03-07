@@ -253,9 +253,9 @@ h4 {
     position: relative;
     display: flex;
     justify-content: center;
-    height: 500px;
+    height: 81%;
     width: 1000px;
-    top: 120px;
+    top: 14%;
     background-color: #272727;
     border-radius: 10px;
 }
@@ -288,7 +288,7 @@ h4 {
         color: white;
         width: 95%;
         text-align: center;
-        top: 48%;
+        top: 44%;
     }
     #learn-more .info-box :nth-child(3) {
         position: absolute;
@@ -297,7 +297,7 @@ h4 {
         color: white;
         width: 95%;
         text-align: center;
-        top: 60%;
+        top: 54%;
         padding-top: 15px;
     }
 }
@@ -306,8 +306,8 @@ h4 {
 #learn-more .info-box img {
     position: absolute;
     object-fit: cover;
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     z-index: 2;
     top: 7%;
     border-radius: 100%;
